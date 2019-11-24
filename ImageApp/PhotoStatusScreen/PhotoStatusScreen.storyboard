@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nZj-Wo-Qch">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo Status Screen View Controller-->
+        <scene sceneID="RsP-s0-bNM">
+            <objects>
+                <viewController storyboardIdentifier="PhotoStatusScreenViewController" id="nZj-Wo-Qch" customClass="PhotoStatusScreenViewController" customModule="ImageApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cU4-XA-fLZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TVk-zP-QmN">
+                                <rect key="frame" x="162.5" y="308.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="n0g-rf-uUv"/>
+                                    <constraint firstAttribute="height" constant="50" id="xin-A5-eOz"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Не просмотрено" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b61-ZX-EB3">
+                                <rect key="frame" x="120.5" y="378.5" width="134.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Leq-Ec-n7c">
+                                <rect key="frame" x="103.5" y="419.5" width="168" height="30"/>
+                                <state key="normal" title="Показать изображение"/>
+                                <connections>
+                                    <action selector="openPhotoScreen:" destination="nZj-Wo-Qch" eventType="touchUpInside" id="MYD-yi-K61"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="b61-ZX-EB3" firstAttribute="top" secondItem="TVk-zP-QmN" secondAttribute="bottom" constant="20" id="12n-hR-1eM"/>
+                            <constraint firstItem="TVk-zP-QmN" firstAttribute="centerX" secondItem="8fR-RA-aRU" secondAttribute="centerX" id="DZB-53-nNz"/>
+                            <constraint firstItem="TVk-zP-QmN" firstAttribute="centerY" secondItem="8fR-RA-aRU" secondAttribute="centerY" id="H3d-iu-uj5"/>
+                            <constraint firstItem="b61-ZX-EB3" firstAttribute="centerX" secondItem="8fR-RA-aRU" secondAttribute="centerX" id="fiS-6x-gYY"/>
+                            <constraint firstItem="Leq-Ec-n7c" firstAttribute="centerX" secondItem="8fR-RA-aRU" secondAttribute="centerX" id="uzL-J3-50E"/>
+                            <constraint firstItem="Leq-Ec-n7c" firstAttribute="top" secondItem="b61-ZX-EB3" secondAttribute="bottom" constant="20" id="znX-gh-YNx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8fR-RA-aRU"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="TVk-zP-QmN" id="SPu-ig-1eh"/>
+                        <outlet property="photoStatus" destination="b61-ZX-EB3" id="pap-30-aot"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cNs-sO-wUe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149" y="153"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UGr-vB-Vfr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo View Controller-->
+        <scene sceneID="SuB-g6-x6r">
+            <objects>
+                <viewController storyboardIdentifier="PhotoViewController" id="UGr-vB-Vfr" customClass="PhotoViewController" customModule="ImageApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7rJ-DR-gsp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d09-Lz-DNX">
+                                <rect key="frame" x="172.5" y="682" width="69" height="30"/>
+                                <state key="normal" title="Нравится"/>
+                                <connections>
+                                    <action selector="likeButtonAction:" destination="UGr-vB-Vfr" eventType="touchUpInside" id="nOt-q1-yB3"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="Gd3-yJ-2Dy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="618"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Wz-aq-lzQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="618"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2Wz-aq-lzQ" firstAttribute="top" secondItem="Gd3-yJ-2Dy" secondAttribute="top" id="2pb-pU-TAg"/>
+                                    <constraint firstItem="2Wz-aq-lzQ" firstAttribute="leading" secondItem="Gd3-yJ-2Dy" secondAttribute="leading" id="Fou-dg-ApQ"/>
+                                    <constraint firstItem="2Wz-aq-lzQ" firstAttribute="width" secondItem="Gd3-yJ-2Dy" secondAttribute="width" id="GmM-4n-ly7"/>
+                                    <constraint firstItem="2Wz-aq-lzQ" firstAttribute="trailing" secondItem="Gd3-yJ-2Dy" secondAttribute="trailing" id="Hc1-BM-UPJ"/>
+                                    <constraint firstItem="2Wz-aq-lzQ" firstAttribute="height" secondItem="Gd3-yJ-2Dy" secondAttribute="height" id="PGk-4V-mfK"/>
+                                    <constraint firstItem="2Wz-aq-lzQ" firstAttribute="bottom" secondItem="Gd3-yJ-2Dy" secondAttribute="bottom" id="Wgn-op-NNS"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="FCH-K2-ISh"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Dba-XK-HWU"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkt-L9-Mot">
+                                <rect key="frame" x="146.5" y="732" width="121" height="30"/>
+                                <state key="normal" title="Вернуться назад"/>
+                                <connections>
+                                    <action selector="closeScreen:" destination="UGr-vB-Vfr" eventType="touchUpInside" id="roe-Fo-0wH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="d09-Lz-DNX" firstAttribute="centerX" secondItem="PMa-hc-U8V" secondAttribute="centerX" id="0u3-mm-9Ob"/>
+                            <constraint firstItem="Dkt-L9-Mot" firstAttribute="centerX" secondItem="PMa-hc-U8V" secondAttribute="centerX" id="4pu-gz-38M"/>
+                            <constraint firstItem="Gd3-yJ-2Dy" firstAttribute="top" secondItem="PMa-hc-U8V" secondAttribute="top" id="774-Tn-ESh"/>
+                            <constraint firstItem="Dkt-L9-Mot" firstAttribute="top" secondItem="d09-Lz-DNX" secondAttribute="bottom" constant="20" id="DXv-i3-nk7"/>
+                            <constraint firstItem="Gd3-yJ-2Dy" firstAttribute="leading" secondItem="PMa-hc-U8V" secondAttribute="leading" id="EQP-U7-bXr"/>
+                            <constraint firstItem="PMa-hc-U8V" firstAttribute="bottom" secondItem="Gd3-yJ-2Dy" secondAttribute="bottom" constant="200" id="Pq0-vV-ot2"/>
+                            <constraint firstItem="d09-Lz-DNX" firstAttribute="top" secondItem="Gd3-yJ-2Dy" secondAttribute="bottom" constant="20" id="cyw-1Q-esN"/>
+                            <constraint firstItem="PMa-hc-U8V" firstAttribute="trailing" secondItem="Gd3-yJ-2Dy" secondAttribute="trailing" id="fkN-yh-YkJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PMa-hc-U8V"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="2Wz-aq-lzQ" id="bli-Tp-ax6"/>
+                        <outlet property="scrollView" destination="Gd3-yJ-2Dy" id="wH9-H3-hyD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NcR-3I-j6e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173.91304347826087" y="134.59821428571428"/>
+        </scene>
+    </scenes>
+</document>
